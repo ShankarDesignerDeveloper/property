@@ -1,0 +1,901 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Agent</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="CSS/property.css" type="text/css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" type="text/css">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ <style>
+ .about {
+  padding-bottom: 30px;
+}
+
+.about .container {
+  box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
+}
+
+.about .video-box img {
+  padding: 15px 0;
+}
+
+.about .section-title p {
+  text-align: left;
+  font-style: italic;
+  color: #666;
+}
+
+.about .about-content {
+  padding: 40px;
+}
+
+.about .icon-box + .icon-box {
+  margin-top: 40px;
+}
+
+.about .icon-box .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: #f1f7fb;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.about .icon-box .icon i {
+  color: #428bca;
+  font-size: 32px;
+}
+
+.about .icon-box:hover .icon {
+  background: #428bca;
+}
+
+.about .icon-box:hover .icon i {
+  color: #fff;
+}
+
+.about .icon-box .title {
+  margin-left: 95px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.about .icon-box .title a {
+  color: #343a40;
+  transition: 0.3s;
+}
+
+.about .icon-box .title a:hover {
+  color: #428bca;
+}
+
+.about .icon-box .description {
+  margin-left: 95px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.about .video-box {
+  position: relative;
+}
+
+.about .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#428bca 50%, rgba(66, 139, 202, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+  overflow: hidden;
+}
+
+.about .play-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.about .play-btn::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate-btn 2s;
+  animation: pulsate-btn 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(66, 139, 202, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+.about .play-btn:hover::after {
+  border-left: 15px solid #428bca;
+  transform: scale(20);
+}
+
+.about .play-btn:hover::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Lists
+--------------------------------------------------------------*/
+.about-lists {
+  padding: 40px;
+}
+
+.about-lists .row {
+  overflow: hidden;
+}
+
+.about-lists .content-item {
+  padding: 40px;
+  border-left: 1px solid #d9e8f4;
+  border-bottom: 1px solid #d9e8f4;
+  margin: -1px;
+}
+
+.about-lists .content-item span {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  color: #9eccf4;
+}
+
+.about-lists .content-item h4 {
+  font-size: 28px;
+  font-weight: 400;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.about-lists .content-item p {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .about-lists .content-item {
+    padding: 40px 0;
+  }
+}
+
+.round1 {
+  border-radius: 50%;
+  padding-top:13px;
+  padding-bottom:13px;
+}
+.round2 {
+  border-radius: 50%;
+  padding-top:3px;
+  padding-bottom:3px;
+}
+.top-corner1 {
+  position: absolute;
+  top: 0;
+  left: 91%;
+  line-height: 1;
+}
+.navbar-nav > .active > .home, .navbar-nav > .active > .home:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .services, .navbar-nav > .active > .services:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+
+.navbar-nav > .active > .awards, .navbar-nav > .active > .awards:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .portfolio, .navbar-nav > .active > .portfolio:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .mustknow, .navbar-nav > .active > .mustknow:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .contact, .navbar-nav > .active > .contact:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+ 
+ </style>
+ 
+ 
+ 
+</head>
+
+<body>
+<!-- template sections --> 
+
+<section class="ls intro_section page_mainslider" style="background:#f8f5f4;">
+
+	<div class="container" style="position:relative;">
+		<div class="row" style="height:107px;">
+			<div class="col-sm-12">
+				<div class="slide_description_wrapper">
+					<div class="top-corner">
+						<a href="/" class="logo">
+							<img src="MEDIA/Images/logo2.png" alt="">
+						</a><div class="">
+                        	<span>+65 1234 7890 </span>
+                        	<span><a href="mailto:realestate@agent.com">realestate@agent.com</a></span>
+						</div>
+                        
+					</div>
+                    <div class="top-corner1">
+						<a href="/" class="logo">
+							<img src="MEDIA/Images/bannerface.png" alt="" class="round2">
+						</a>
+                        
+					</div>
+
+					
+				</div> <!-- eof .slide_description_wrapper -->
+			</div> <!-- eof .col-* -->
+		</div><!-- eof .row -->
+	</div><!-- eof .container -->
+</section>
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-gradient">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item ">
+        <a class="nav-link home" href="index.html">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link services" href="premium_service.html">PREMIUM SERVICES</a>
+      </li>
+       <li class="nav-item active">
+        <a class="nav-link awards" href="awards_testimonials.html">AWARDS & TESTIMONIALS</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link portfolio" href="property_portfolio.html">PROPERTY PORTFOLIO</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link mustknow" href="propert_must.html">PROPERTY MUST-KNOW</a>
+      </li>
+       <!--<li class="nav-item">
+        <a class="nav-link contact" href="contact_me">CONTACT ME</a>
+      </li>-->
+   </div>
+   <div class="Social_Icons">
+   <a class="fa fa-facebook" href="#" style=" color:#4f85bb; font-size:18px;"></a>
+   <a class="fa fa-instagram" href="#" style="color:#ee4f87; font-size:18px;" ></a>
+   <a class="fa fa-twitter" href="#" style="color:#7abcff; font-size:18px;" ></a>
+   <a class="fa fa-youtube-play" href="#" style="color:#ff0c0c; font-size:18px;" ></a>
+   </div>
+</nav>
+<section class="ls ms section_p_top_45 section_p_bottom_75 section_hot parallax">
+<div class="track_record" data-aos="fade-up">What Kenny's Satisfied Clients Have To Say</div>
+<div class="container-fluid" data-aos="fade-up">
+<div class="row">
+<div class="col-md-12">
+                <div class="panel-group mt_35" id="accordion">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse5" aria-expanded="true">Client - 1</a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse with_background collapse show" data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        Kenny is a trust worthy professional. I made the right choice is engaging him as my agent and representative. The entire transaction was hassle free and fair. I sold my property at a good price and more importantly Kenny got me a nice buyer whom I get to meet eventually. It is a happy transaction! I will recommend Kenny to anyone who is looking to buy or sell their property. Kenny has the resources as well as the necessary soft skills to make it work!
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                                       
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse6" class="collapsed"aria-expanded="false">
+                                    Client - 2
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse with_background collapse" data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        Kenny is top of his game in the real estate industry.
+Not only is he knowledgable, he also runs his business with his heart and full integrity - rare.
+Client’s welfare and making sure their future investments are sound are always #1 in his mind.
+As such, no one regrets choosing to work with him - the testimonies speak themselves.
+Grow (Wealth) with Kenny!
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse7" class="collapsed"aria-expanded="false">
+                                    Client - 3
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse with_background collapse" data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                        <span class="media-hover"></span>
+                                    </div>
+                                    <div class="media-body">
+						I have an academic background in Real Estate, and is currently working in the financial sector, but Kenny is able to teach me many new things about property investment that I never knew about. Kenny is someone you should speak to, to @GrowYourPassiveWealth especially relating to property investments; he is sincere in his work and diligent in his analysis.
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse8" class="collapsed" aria-expanded="false">
+                                    Client - 4
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse8" class="panel-collapse with_background collapse " data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                        		"Me and my wife have been trying to lease out our industrial property and we have hired several agents to help us for over 6 months. A friend referred Kenny to us and within 3 weeks, he found a good tenant for us! He is very committed to his clients and I highly recommend his service."										
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse9" class="collapsed" aria-expanded="false">
+                                    Client - 5
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse9" class="panel-collapse with_background collapse " data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                        		
+						Hey Kenny!
+
+My husband & I would like to convey our thanks to you for all the hard work done for us! Thank you so much for being so attentive to our requirements. Not forgetting to mention your patience for going through the procedures with us, been working tirelessly for the sale of our house & in search of our dream property! The whole process is a breeze! 
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<section>
+<div class="track_record">Notable Awards & Achievement</div>
+<div class="container">
+<blockquote class="without_background">“Given my background as a project director managing multi-million dollars contracts, performing extensive market analysis has became part of my DNA to determine the risk versus reward in any investment proposition. I employ advance proptech tools coupled with proven strategies to help my valued clients maximize their investment returns and to help them enter the market at the right entry prices.” ~ Kenny Lee, Propnex Realty</blockquote>
+
+<div class="row ">
+<div class="col-lg-12 col-md-12 footer-links">
+            <ul >
+              <div class="bx bx-chevron-right text-dark"> <span class="font_style_change">Super Platinum Award Achiever May 2018.</span></div><br>
+              <div class="bx bx-chevron-right text-dark"> <span class="font_style_change">Platinum Award Achiever June 2019.</span></div><br>
+              <div class="bx bx-chevron-right text-dark"> <span class="font_style_change">Overall 2018 Propnex Top 200 Achievers.</span></div><br>
+              <div class="bx bx-chevron-right text-dark"> <span class="font_style_change">Top Individual Achiever, 1st Runner-up.</span></div><br>
+              <div class="bx bx-chevron-right text-dark"> <span class="font_style_change">Top Private Resale Achiever, 1st Runner-up.</span></div><br>
+              <div class="bx bx-chevron-right text-dark"> <span class="font_style_change">Top Commercial & Industrial Achiever, 2nd runner-up.</span></div><br>
+              <div class="bx bx-chevron-right text-dark"> <span class="font_style_change">Top Recruiter, 4th Position.</span></div>
+            </ul>
+          </div>
+          </div>
+
+</div>
+</section>
+<!-- ======= Our Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container-fluid">
+
+        <div class="row portfolio-container">
+
+          <div class="col-md-3 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 1</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 1"><i class="icofont-eye"></i></a>
+                  
+                </div>
+			</div>
+              
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 2</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo2.jpg" data-gall="portfolioGallery" class="venobox" title="Property 2"><i class="icofont-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+          
+          <div class="col-md-3 portfolio-item ">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+
+          
+        </div>
+        <div class="row portfolio-container">
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 1</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 1"><i class="icofont-eye"></i></a>
+                  
+                </div>
+			</div>
+              
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 2</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo2.jpg" data-gall="portfolioGallery" class="venobox" title="Property 2"><i class="icofont-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item ">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+          
+          <div class="col-md-3 portfolio-item " >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+
+          
+        </div>
+      </div>
+    </section><!-- End Our Portfolio Section -->
+    
+<section class="ls ms section_p_top_45 section_p_bottom_75 section_hot parallax">
+<div class="track_record">Record Property Prices Achieved By Kenney</div>
+<div class="container">
+<h3 class="without_background1">Kenny has set several recent record prices in the following development, notably:</h3>
+
+<div class="row ">
+<div class="col-lg-12 col-md-12 footer-links">
+            <ul >
+              <div class="bx bx-chevron-right"> <span class="font_style_change">Marina Bay Residences – in May 2018, transacted at record highest of $3,600 per square foot price or $8.7 million in the Marina Bay area.</span></div><br>
+              <div class="bx bx-chevron-right"> <span class="font_style_change">Season Park Condo – in Feb 2018, transacted at record price of $1.17m for a 3 bedroom unit.</span></div><br>
+              <div class="bx bx-chevron-right"> <span class="font_style_change">Miltonia Residences – in April 2018, transacted at highest per square foot price for a loft unit.</span></div><br>
+              <div class="bx bx-chevron-right"> <span class="font_style_change">Park Natura – in May 2018, patio 4 bedrooms at $2.15m.</span></div><br>
+              <div class="bx bx-chevron-right"> <span class="font_style_change">Boon Teck Towers in April 2018, 3 bedrooms at $1.75m.</span></div><br>
+              <div class="bx bx-chevron-right "> <span class="font_style_change">Food Factory (Foodxchange) at Admiralty transacting a pair of central kitchen at $3.25m.</span></div><br>
+              
+            </ul>
+          </div>
+          </div>
+
+</div>
+<!-- ======= Our Portfolio Section ======= -->
+   
+      <div class="container-fluid portfolio section-bg" id="portfolio">
+
+        <div class="row portfolio-container">
+
+          <div class="col-md-3 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 1</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 1"><i class="icofont-eye"></i></a>
+                  
+                </div>
+			</div>
+              
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 2</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo2.jpg" data-gall="portfolioGallery" class="venobox" title="Property 2"><i class="icofont-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+          
+          <div class="col-md-3 portfolio-item ">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+
+          
+        </div>
+        <div class="row portfolio-container">
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 1</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 1"><i class="icofont-eye"></i></a>
+                  
+                </div>
+			</div>
+              
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 2</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo2.jpg" data-gall="portfolioGallery" class="venobox" title="Property 2"><i class="icofont-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item ">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+          
+          <div class="col-md-3 portfolio-item " >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+
+          
+        </div>
+      </div>
+    </section><!-- End Our Portfolio Section -->
+    
+    
+    
+    
+<footer id="footer" data-aos="fade-up" data-aos-delay="100">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <img src="MEDIA/Images/logo2.png">
+            <p class="address">
+              SINGAPORE,123456<br><br>
+              <strong>Phone:</strong> +65 1234567<br>
+              <strong>Email:</strong> example@gmail.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PREMIUM SERVICES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">AWARDS & TESTIMONIALS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PROPERTY PORTFOLIO</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PROPERTY MUST-KNOW</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>FAQ</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">ONLY CONCEPTUAL TEACHING</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">SPECIAL CARE FOR SLOW LEARNERS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">DAILY MOTIVATIONAL CLASSES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">SMART CLASSES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">COMMUNICATION SKILLS DEVELOPMENT</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">SEMINARS BY EVERY STUDENT</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PRACTICALS BY STUDENTS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">WEEKLY TEST</a></li>
+            </ul>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Shankar Lukka</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+        Designed by <a href="">Shankar</a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+</body>
+<!-- Vendor JS Files -->
+   <script src="assets/vendor/jquery/jquery.min.js"></script>
+  
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</html>

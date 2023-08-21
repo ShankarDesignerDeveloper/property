@@ -1,0 +1,1077 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Property Agent</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href="CSS/property.css" type="text/css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet" type="text/css">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+ 
+  <style>
+ .about {
+  padding-bottom: 30px;
+}
+
+.about .container {
+  box-shadow: 0 5px 25px 0 rgba(214, 215, 216, 0.6);
+}
+
+.about .video-box img {
+  padding: 15px 0;
+}
+
+.about .section-title p {
+  text-align: left;
+  font-style: italic;
+  color: #666;
+}
+
+.about .about-content {
+  padding: 40px;
+}
+
+.about .icon-box + .icon-box {
+  margin-top: 40px;
+}
+
+.about .icon-box .icon {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  background: #f1f7fb;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.about .icon-box .icon i {
+  color: #428bca;
+  font-size: 32px;
+}
+
+.about .icon-box:hover .icon {
+  background: #428bca;
+}
+
+.about .icon-box:hover .icon i {
+  color: #fff;
+}
+
+.about .icon-box .title {
+  margin-left: 95px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.about .icon-box .title a {
+  color: #343a40;
+  transition: 0.3s;
+}
+
+.about .icon-box .title a:hover {
+  color: #428bca;
+}
+
+.about .icon-box .description {
+  margin-left: 95px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.about .video-box {
+  position: relative;
+}
+
+.about .play-btn {
+  width: 94px;
+  height: 94px;
+  background: radial-gradient(#428bca 50%, rgba(66, 139, 202, 0.4) 52%);
+  border-radius: 50%;
+  display: block;
+  position: absolute;
+  left: calc(50% - 47px);
+  top: calc(50% - 47px);
+  overflow: hidden;
+}
+
+.about .play-btn::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 100;
+  transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.about .play-btn::before {
+  content: '';
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation: pulsate-btn 2s;
+  animation: pulsate-btn 2s;
+  -webkit-animation-direction: forwards;
+  animation-direction: forwards;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: steps;
+  animation-timing-function: steps;
+  opacity: 1;
+  border-radius: 50%;
+  border: 5px solid rgba(66, 139, 202, 0.7);
+  top: -15%;
+  left: -15%;
+  background: rgba(198, 16, 0, 0);
+}
+
+.about .play-btn:hover::after {
+  border-left: 15px solid #428bca;
+  transform: scale(20);
+}
+
+.about .play-btn:hover::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-40%) translateY(-50%);
+  width: 0;
+  height: 0;
+  border: none;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 15px solid #fff;
+  z-index: 200;
+  -webkit-animation: none;
+  animation: none;
+  border-radius: 0;
+}
+
+@-webkit-keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+@keyframes pulsate-btn {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+# About Lists
+--------------------------------------------------------------*/
+.about-lists {
+  padding: 40px;
+}
+
+.about-lists .row {
+  overflow: hidden;
+}
+
+.about-lists .content-item {
+  padding: 40px;
+  border-left: 1px solid #d9e8f4;
+  border-bottom: 1px solid #d9e8f4;
+  margin: -1px;
+}
+
+.about-lists .content-item span {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  color: #9eccf4;
+}
+
+.about-lists .content-item h4 {
+  font-size: 28px;
+  font-weight: 400;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.about-lists .content-item p {
+  color: #aaaaaa;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .about-lists .content-item {
+    padding: 40px 0;
+  }
+}
+
+.round1 {
+  border-radius: 50%;
+  padding-top:13px;
+  padding-bottom:13px;
+}
+.round2 {
+  border-radius: 50%;
+  padding-top:3px;
+  padding-bottom:3px;
+}
+.top-corner1 {
+  position: absolute;
+  top: 0;
+  left: 91%;
+  line-height: 1;
+}
+.navbar-nav > .active > .home, .navbar-nav > .active > .home:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .services, .navbar-nav > .active > .services:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+
+.navbar-nav > .active > .awards, .navbar-nav > .active > .awards:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .portfolio, .navbar-nav > .active > .portfolio:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .mustknow, .navbar-nav > .active > .mustknow:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+.navbar-nav > .active > .contact, .navbar-nav > .active > .contact:focus
+{
+	background:#ee4f87;
+	color:#fff !important;
+	border-radius:10px;
+}
+ 
+ </style>
+ 
+ 
+ 
+</head>
+
+<body>
+<!-- template sections --> 
+
+<section class="ls intro_section page_mainslider">
+	<img src="MEDIA/Images/slide01.jpg" alt="">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="slide_description_wrapper">
+					<div class="top-corner">
+						<a href="/" class="logo">
+							<img src="MEDIA/Images/logo2.png" alt="">
+						</a><div class="">
+                        	<span>+65 1234 7890</span>
+                        	<span><a href="mailto:realestate@agent.com">realestate@agent.com</a></span>
+						</div>
+					</div>
+					<div class="slide_description">
+						<div class="intro-layer to_animate" data-animation="slideExpandUp">
+							<p class="big">
+								Lana Rowe Real Estate
+							</p>
+                            <span class="">Platinum Award Realtor At Your Service</span>
+						</div>
+						<div class="intro-layer to_animate" data-animation="slideExpandUp">
+			                <form class="contact-form mt_60" method="post" action="">
+	                            <p class="contact-form-name">
+	                                <!--<label for="name">Full Name<span class="required">*</span></label>-->
+	                                <input type="text" aria-required="true" size="30" value="" name="name" id="name" class="form-control" placeholder="Full name">
+	                            </p>
+	                            <p class="contact-form-email">
+	                                <!--<label for="email">Email address<span class="required">*</span></label>-->
+	                                <input type="email" aria-required="true" size="30" value="" name="email" id="email" class="form-control" placeholder="Email address">
+	                            </p>
+	                            <p>
+									<!--<select id="selected_country" name="selected_country" class="form-control select_custom_color">
+										 
+										<option class="gray" value="none" disabled selected hidden>Select a Country</option>
+									    <option class="others" value="one">United States of America</option>
+									    <option class="others" value="two">Canada</option>
+									    <option class="others" value="three">Mexico</option>
+
+									</select>-->
+								</p>
+	                            <p class="contact-form-zip">
+	                                <!--<label for="zipcode">ZIP code<span class="required">*</span></label>-->
+	                                <input type="text" aria-required="true" size="30" value="" name="zipcode" id="zipcode" class="form-control" placeholder="ZIP code">
+	                            </p>
+	                            <p class="contact-form-submit mt_40">
+	                                <button type="submit" id="contact_form_submit" name="" class="theme_button color2">Submit</button>
+	                                <!--<button type="reset" id="contact_form_reset" name="contact_reset" class="theme_button">Check Houses</button>-->
+	                            </p>
+			                </form>
+						</div>
+					</div> <!-- eof .slide_description -->
+				</div> <!-- eof .slide_description_wrapper -->
+			</div> <!-- eof .col-* -->
+		</div><!-- eof .row -->
+	</div><!-- eof .container -->
+</section>
+<!----menu bar start---->
+
+<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-gradient">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link home" href="index.html">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link services" href="premium_service.html">PREMIUM SERVICES</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link awards" href="awards_testimonials.html">AWARDS & TESTIMONIALS</a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link portfolio" href="property_portfolio.html">PROPERTY PORTFOLIO</a>
+      </li> 
+      <li class="nav-item">
+        <a class="nav-link mustknow" href="property_must.html">PROPERTY MUST-KNOW</a>
+      </li>
+       <!--<li class="nav-item">
+        <a class="nav-link contact" href="contact_me">CONTACT ME</a>
+      </li>-->
+   </div>
+   <div class="Social_Icons">
+   <a class="fa fa-facebook" href="#" style=" color:#4f85bb; font-size:18px;"></a>
+   <a class="fa fa-instagram" href="#" style="color:#ee4f87; font-size:18px;" ></a>
+   <a class="fa fa-twitter" href="#" style="color:#7abcff; font-size:18px;" ></a>
+   <a class="fa fa-youtube-play" href="#" style="color:#ff0c0c; font-size:18px;" ></a>
+   </div>
+</nav>
+<div class="container-fluid" style="padding-left:0px; padding-right:0px;" data-aos="fade-up">
+<blockquote>"Success is not final; failure is not fatal: it is the courage to continue that counts." <br><span>-Winston Churchill</span></blockquote>
+</div><!---eof blockquote---->
+<div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-aos="fade-up" data-aos-delay="100">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+    <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="MEDIA/Images/slide02.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-block d-md-block">
+        <h3 class="bg-grey">DELIVERY THE PROMISE</h3>
+        <p class="bg-info"><span>OVER $100M OF REAL ESTATE TRANSACTED</span><br>Through his creative strategy, Kenny has helped clients to increase the intrinsic value of their properties and  thereby transacting at new high records, notably the Marina Bay area where he sold almost at $1m above the market valuation.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="MEDIA/Images/slide03.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h3 class="bg-grey">DELIVERY THE PROMISE</h3>
+        <p class="bg-info"><span>OVER $100M OF REAL ESTATE TRANSACTED</span><br>Through his creative strategy, Kenny has helped clients to increase the intrinsic value of their properties and  thereby transacting at new high records, notably the Marina Bay area where he sold almost at $1m above the market valuation.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="MEDIA/Images/slide04.jpg" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+       <h3 class="bg-grey">DELIVERY THE PROMISE</h3>
+        <p class="bg-info"><span>OVER $100M OF REAL ESTATE TRANSACTED</span><br>Through his creative strategy, Kenny has helped clients to increase the intrinsic value of their properties and  thereby transacting at new high records, notably the Marina Bay area where he sold almost at $1m above the market valuation.</p>
+      </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- ======= Counts Section ======= -->
+    <section class="counts section-bg">
+      <div class="container">
+<div class="track_record" data-aos="fade-up">My Track Record</div>
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up">
+            <div class="count-box">
+              <i class="icofont-simple-smile" style="color: #20b38e;"></i>
+              <span data-toggle="counter-up">600</span><br>
+              <p class="text-dark"><strong>Happy Clients</strong></p><br>
+              <p class="text-justify">over and counting…. The numbers of satisfied clients whom Lana has brought smiles to and fulfilled their investment objectives.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="count-box">
+              <i class="icofont-document-folder" style="color: #c042ff;"></i>
+              <span data-toggle="counter-up">521</span><br>
+              <p><strong>Projects</strong></p><br>
+              <p class="text-justify">over and counting…. The numbers of satisfied clients whom Lana has brought smiles to and fulfilled their investment objectives.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="400">
+            <div class="count-box">
+              <i class="icofont-live-support" style="color: #46d1ff;"></i>
+              <span data-toggle="counter-up">1,463</span><br>
+              <p><strong>Hours Of Support</strong></p><br>
+              <p class="text-justify">over and counting…. The numbers of satisfied clients whom Lana has brought smiles to and fulfilled their investment objectives.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6 text-center" data-aos="fade-up" data-aos-delay="600">
+            <div class="count-box">
+              <i class="icofont-users-alt-5" style="color: #ffb459;"></i>
+              <span data-toggle="counter-up">15</span><br>
+              <p><strong>Hard Workers</strong></p><br>
+              <p class="text-justify">over and counting…. The numbers of satisfied clients whom Lana has brought smiles to and fulfilled their investment objectives.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+ <!-- About Section -->
+ <section class="bg-light" data-aos="fade-up" data-aos-delay="100"> 
+ <div class="container ">
+ <div class="row">
+ <div class="col-md-12">
+ <div class="about_name">Hey, I’m Lana Rowe!</div>
+ <div class="card mb-3" style="max-width: 1110px;">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+	<br>
+      <img src="MEDIA/Images/face_6.jpg" class="card-img" alt="">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <p class="card-text text-justify"><strong>Lana Rowe</strong> is a property investment coach and an associate division director with Singapore’s largest listed real estate agency in Singapore, Propnex Limited. Started 10 years ago as a property investor himself, he is passionate about real estate investment and has achieved success by investing in Singapore’s property market. Having been through numerous training and advance property workshops by leading property experts worldwide, he believes that there is a disciplined approach and a proven formula to real estate investment using market heuristics and predictive data analysis using research tools.
+
+While location is an important criteria in selecting a property, the timing of entry or exit in the property market is even more so to lock in the correct price for your asset depending if you are a buyer or seller. Experienced and skillful real estate experts do not rely on emotions but employ numbers and data to make the right move. Harnessing data of the PAST (price trends and transactions), the PRESENT (macro economy, government policies, land prices) and the FUTURE (government conceptual plans, master plans and future developments) allows the individuals to take advantage of the market while minimizing their risk and identifying the winning property from the basket. While it takes years to perfect this art and avoid the hidden pitfalls, having a reliable and competent property consultant who can protect your interest thus is of paramount importance. More than just a consistent award-winning realtor, Kenny has helped many property investors and home seekers alike achieve their real estate objectives. He offers a high level of service built on the foundation of trust and care for his clients’ needs and is little wonder why he is often the recommended realtor in Singapore among his clients’ circle of influence. His systematic approach of using market data research taken from financial institutions and governmental data allows him to make the precise and calculated moves for his clients while minimizing risks and maximizing returns. This explains why he often sets record highest prices in several developments, notably in the Marina Bay Residences where he holds the record for transacting a premium unit at $8,700,000 or at $3,674 per square foot. Today, Kenny and his associates manages over $100 million in asset value for his clients in both the residential and the commercial real estate sector. He currently leads a team in Singapore’s luxury property market focusing in the core central region such as Orchard and Marina Bay area. He is also a frequent guest speaker who is invited overseas to share insights about Singapore’s real estate scene. 
+
+If you are looking for a responsible, knowledgeable and trusted property professional to manage your property or to grow your assets, talk to Kenny and his team today. </p>
+        <p class="card-text"><small class="text-muted">-Lana Rowe</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+ </div>
+ </div>
+ </div>
+ </section>
+ <!--End About Section -->
+<!-- ======= Our Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <div class="track_record">Featured Prestige Properties</div>
+        </div>
+
+        <div class="row portfolio-container">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 1</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 1"><i class="icofont-eye"></i></a>
+                  <!--<a href="#" title="More Details"><i class="icofont-external-link"></i></a>-->
+                </div>
+			</div>
+              
+            </div>
+			<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">33 Campus Point Drive</h5>
+							<div class="item-extra">
+                                <span><i class="bx bx-move"> </i>1700 sq</span>
+                                <span><i class="bx bx-shopping-bag"> </i>4 bedrooms</span>
+                                <span><i class="bx bx-cloud-rain"></i>2 baths</span>
+                            </div>
+						<p class="card-text">Lorem ipsum doloamet consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+					</div>
+			</div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web" data-aos="fade-up" data-aos-delay="200">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 2</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo2.jpg" data-gall="portfolioGallery" class="venobox" title="Property 2"><i class="icofont-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+			<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">33 Campus Point Drive</h5>
+							<div class="item-extra">
+                                <span><i class="bx bx-move"> </i>1700 sq</span>
+                                <span><i class="bx bx-shopping-bag"> </i>4 bedrooms</span>
+                                <span><i class="bx bx-cloud-rain"></i>2 baths</span>
+                            </div>
+						<p class="card-text">Lorem ipsum doloamet consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+					</div>
+			</div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app" data-aos="fade-up" data-aos-delay="400">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			<div class="card">
+					<div class="card-body">
+						<h5 class="card-title">33 Campus Point Drive</h5>
+							<div class="item-extra">
+                                <span><i class="bx bx-move"> </i>1700 sq</span>
+                                <span><i class="bx bx-shopping-bag"> </i>4 bedrooms</span>
+                                <span><i class="bx bx-cloud-rain"></i>2 baths</span>
+                            </div>
+						<p class="card-text">Lorem ipsum doloamet consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna.</p>
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+					</div>
+			</div>
+          </div>
+
+          
+        </div>
+
+      </div>
+    </section><!-- End Our Portfolio Section -->
+<section class="ls ms section_p_top_45 section_p_bottom_75 section_hot parallax">
+<div class="container">
+<div class="row">
+<div class="col-md-6 bg-white" data-aos="fade-up" >
+<div class="media">
+<div class="media-body">
+<h3 class="Awards_Accolades" style="color:#000;">Awards & Accolades</h3>
+</div>
+  
+<div class="media-left">
+<a href="#" class="round gradient-block with-hover">
+<img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round1">
+</a>
+</div>
+</div>
+
+<div class="text-justify"><strong style="text-transform:uppercase;">A trusted name</strong> in the real estate sector by his clients, Lara constantly seeks to exceed his clients expectations by providing them the best service they could deserve, thereby developing a long term trusted relationship.<br><br>
+
+Be it a purchase, a sale or managing the lease of a residential or commercial property, Kenny and his team of elite associates believe every esteemed client deserves the best. <br><br>
+
+This explains the reason he is able to stand out as a consistent top performer in Singapore’s largest listed real estate agency with over 8000 agents.</div><br><br>
+<div>
+<h5 style="color:#000;">Lara’s distinguished awards includes:</h5>
+
+<div class="fa fa-angle-right arrow_content" style="width:100%"> <span>Top Private Resale Achiever Overall (2nd runner up out of 8400 agents) June 2018</span></div>
+<div class="fa fa-angle-right arrow_content " style="width:100%;"> <span>Super Platinum Award Achiever (grossing over $250,000 in a singular month) June 2018</span></div>
+<div class="fa fa-angle-right arrow_content"> <span>Top Individual Producer Award August 2018</span></div>
+<div class="fa fa-angle-right arrow_content"> <span>Top Commercial Property Achiever September 2018</span></div><br>
+<div class="fa fa-angle-right arrow_content"> <span>Top Recruiter (4th Pos) Nov 2018</span></div><br>
+<div class="fa fa-angle-right arrow_content"> <span>Platinum Award May 2019</span></div><br>
+<div class="fa fa-angle-right arrow_content"> <span>Top 50 Individual Achiever PNG Q2 2019</span></div>
+
+</div>
+<div class="btn know_more">See Full Awards List</div>
+</div>
+<div class="col-md-6" data-aos="fade-up" data-aos-delay="200">                    
+                <h3 class="title title_style_1 Awards_Accolades">Testimonials</h3>
+                <div class="panel-group mt_35" id="accordion">
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse5" aria-expanded="true">
+                                    We would like to sincerely thank you
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse5" class="panel-collapse with_background collapse show" data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        Lara is a trust worthy professional. I made the right choice is engaging him as my agent and representative. The entire transaction was hassle free and fair. I sold my property at a good price and more importantly Lara got me a nice buyer. I will recommend Kenny to anyone who is looking to buy or sell their property. Lara has the resources and the necessary soft skills to make it work!.
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse6" class="collapsed"aria-expanded="false">
+                                    professional & no-nonsense approach was appreciated
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse6" class="panel-collapse with_background collapse" data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                    </div>
+                                    <div class="media-body">
+                                        Lara is top of his game in the real estate industry. Not only is he knowledgable, he also runs his business with his heart and full integrity - rare. Client’s welfare and making sure their future investments are sound are always #1 in his mind. As such,always come firstNo one regrets choosing to work with him - the testimonies speak themselves. Grow (Wealth) with Kenny!.
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a data-toggle="collapse"  data-target="#collapse7" class="collapsed"aria-expanded="false">
+                                    We would like to extend our sincere thanks
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapse7" class="panel-collapse with_background collapse" data-parent="#accordion">
+                            <div class="panel-body">
+                                <div class="media">
+                                    <div class="media-left">
+                                        <a href="#" class="round gradient-block with-hover">
+                                            <img src="MEDIA/Images/face_4_70x70.jpg" alt="" class="round">
+                                        </a>
+                                        <span class="media-hover"></span>
+                                    </div>
+                                    <div class="media-body">
+                                        Hey Lara! My husband & I would like to convey our thanks to you for all the hard work done for us! Thank you so much for being so attentive to our requirements. Not forgetting to mention your patience for going through the procedures with us, been working tirelessly for the sale of our house & in search of our dream property! The whole process is a breeze! We are so glad that we engaged your service! We are very impressed and you are definitely the BEST agent we have seen so far! Once again, thank you so much & please keep in touch!.
+                                        <p>Amy Willis, <span>Housewife</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn know_more">More Testimonials</div>
+            </div>
+
+</div>
+</div>
+
+</section>
+<section>
+<div class="track_record" data-aos="fade-up">Top Locations By Property Investors</div>
+<div class="container-fluid">
+
+<div class="row">
+<div class="col-md-12">
+<div class="card-deck">
+  <div class="card" data-aos="fade-up" data-aos-delay="200">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"style="color:#ee4f87;"><strong>ORCHARD DISTRICT</strong></h5>
+      <p class="card-text text-justify">A renowned address globally, Orchard Road is one of the most popular shopping paradise and has one of the most prestigious addresses and luxurious residences known to investors.</p>
+    </div>
+  </div>
+  <div class="card" data-aos="fade-up" data-aos-delay="400">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"style="color:#ee4f87;"><strong>SENTOSA COVE</strong></h5>
+      <p class="card-text text-justify">One of Singapore's most exclusive and prestigious address, Sentosa Cove is home to many well-heeled and affluent individuals with a private yacht berth and next to renowned golf courses.</p>
+    </div>
+  </div>
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"style="color:#ee4f87;"><strong>MARINA BAY & CBD</strong></h5>
+      <p class="card-text text-justify">With Singapore positioned to be the new global finance hub, the Marina Bay new CBD houses top global MNCs and Banks. It has one of the highest tenancy demand being in the CBD.</p>
+    </div>
+  </div>
+  <div class="card" data-aos="fade-up" data-aos-delay="800">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"style="color:#ee4f87;"><strong>EAST COAST</strong></h5>
+      <p class="card-text text-justify">Acclaimed to be one of the ever-greens of Singapore's real estate and the most desirable enclave to call home-next-to-the-beach and offers unparalleled sea view and lifestyle.</p>
+    </div>
+  </div>
+</div>
+</div>
+<div class="btn read_more" data-aos="fade-up" data-aos-delay="1000">Read More</div>
+</div>
+</div>
+</section>
+
+<div class="container-fluid video-overlay">
+<video src="MEDIA/Video/Motion.mp4" autoplay loop muted></video>
+<div class="overlay">
+        <p>Property Blog By Lara</p>
+		<div class="New_launches">New Launches Reviews</div>
+        <div class="opacity_bg"></div>
+</div>
+</div>
+<section style="background:#EE4F87;margin-top:-8px;" data-aos="fade-up" >
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<div class="selling_content">
+<div class="Top_selling">Top Selling Homes</div><br>
+<div class="all_nutshell">All In A <br>Nutshell</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="text-white">In Singapore where there are a dozen of new project homes being introduced every few months, it is little wonder that one of Singaporeans’ favorite past times is to visit condominium show flats over the weekends.<br><br>
+
+While public media and published articles are written to impress the audience and to sell, home owners often have to do their homework before paying a visit down to the show flats.</div>
+</div>
+<div class="col-md-4">
+<div class="text-white">Being passionate in market research and blogging, Kenny and his editorial team attempts to share the attributes of each new project with what to look out for from an agent’s point of view so that potential buyers will be able to zoom into the salient details of each project and makes a more informed choice in their next home purchase.<br>
+
+The selling point of each development have been summarized for readers’ quick reference.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ======= Our Portfolio Section ======= -->
+    <section id="portfolio" class="portfolio section-bg" data-aos="fade-up" data-aos-delay="200">
+      <div class="container-fluid">
+
+        <div class="row portfolio-container">
+
+          <div class="col-md-3 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 1</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 1"><i class="icofont-eye"></i></a>
+                  
+                </div>
+			</div>
+              
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 2</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo2.jpg" data-gall="portfolioGallery" class="venobox" title="Property 2"><i class="icofont-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+          
+          <div class="col-md-3 portfolio-item ">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+
+          
+        </div>
+        <div class="row portfolio-container">
+
+          <div class="col-md-3 portfolio-item" >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 1</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 1"><i class="icofont-eye"></i></a>
+                  
+                </div>
+			</div>
+              
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 2</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo2.jpg" data-gall="portfolioGallery" class="venobox" title="Property 2"><i class="icofont-eye"></i></a>
+                  </div>
+              </div>
+            </div>
+			
+          </div>
+
+          <div class="col-md-3 portfolio-item ">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+          
+          <div class="col-md-3 portfolio-item " >
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/photo1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Property 3</h4>
+                <p>Property</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/photo1.jpg" data-gall="portfolioGallery" class="venobox" title="Property 3"><i class="icofont-eye"></i></a>
+                  
+                </div>
+              </div>
+            </div>
+			
+          </div>
+
+          
+        </div>
+<div class="btn see_more" >See More Project Reviews</div>
+      </div>
+    </section><!-- End Our Portfolio Section -->
+<section class="bg-img">
+<div class="track_record" data-aos="fade-up" >Core Central Region (CCR) & Downtown Core Region (CBD)</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6 border-right" data-aos="fade-up" data-aos-delay="200">
+<div class="downtown">Downtown Core Region</div>
+<div class="district">
+District 1 – Boat Quay, Chinatown, Havelock Road, Marina Square, Raffles Place, Suntec City<br>
+District 2 – Anson Road, Chinatown, Neil Road, Raffles Place, Shenton Way, Tanjong Pagar<br>
+District 4 – Sentosa Island<br>
+District 6, 7 – City Hall, High Street, North Bridge Road, Beach Road, Bugis Rochor
+</div>
+</div>
+<div class="col-md-6 border-left" data-aos="fade-up" data-aos-delay="400">
+<div class="downtown">Core Central Region</div>
+<div class="district">
+District 9 – Cairnhill, Killiney, Leonie Hill, Orchard, Oxley<br>
+District 10 – Balmoral, Bukit Timah, Grange Road, Holland, Orchard Boulevard, River Valley, Tanglin<br>
+District 11 – Chancery, Dunearn Road, Newton
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-12">
+<div class="card-deck">
+  <div class="card" data-aos="fade-up" data-aos-delay="600">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color:#ee4f87;font-weight:bold;"><strong>Midtown Bay Residences (District 7) - GuocoLand</strong></h5>
+      <p class="card-text">- Integrated with Grade A offices, with ready quality tenants<br>
+- 219 residential units of 1/2/3 bedrooms from $1.38m<br>
+- Coveted White site (URA Masterplan 2014)<br>
+- Future growth potential as new downtown</p>
+    </div>
+  </div>
+  <div class="card" data-aos="fade-up" data-aos-delay="800">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color:#ee4f87; font-weight:bold;"><strong>Martin Modern (District 9) - GuocoLand</strong></h5>
+      <p class="card-text">- Expats favorite location - Robertson Quay<br>
+- Rare large land plot with full condo facilities in River Valley<br>
+- 3 minutes walk to the upcoming Great World MRT station (Thomson MRT line) to CBD and Orchard belt<br>
+- Currently the most attractive per-square-foot entry price in CCR at $2,4xx psf</p>
+    </div>
+  </div>
+  <div class="card" data-aos="fade-up" data-aos-delay="1000">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color:#ee4f87; font-weight:bold;"><strong>19 Nassim (District 10) - Keppel Land</strong></h5>
+      <p class="card-text">- Prestigious and exclusive address next to Singapore Botanic Gardens<br>
+- Rare 1 and 2 bedroom unit types in Nassim vicinity<br>
+- Connected to the upcoming Napier station Thomson MRT line ideal for tenants' connectivity<br>
+- Limited residential land supply, good investment property</p>
+    </div>
+  </div>
+  <div class="card" data-aos="fade-up" data-aos-delay="1200">
+    <img src="assets/img/portfolio/photo1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" style="color:#ee4f87; font-weight:bold;"><strong>Neu @ Novena (District 11) - Roxy Homes</strong></h5>
+      <p class="card-text">- Connected to Novena MRT, 2 shopping malls and concentration of tenant pool<br>
+- Freehold 1 bedroom to 4 bedroom types, which suits a range of tenant mix<br>
+- Singapore's medical hub, with established Mount Elizabeth and Novena Medical Center<br>
+- Limited residential land supply, good investment property poised to grow</p>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="footer" data-aos="fade-up" data-aos-delay="100">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <img src="MEDIA/Images/logo2.png">
+            <p class="address">
+              SINGAPORE,123456<br><br>
+              <strong>Phone:</strong> +65 1234567<br>
+              <strong>Email:</strong> example@gmail.com<br>
+            </p>
+            <div class="social-links mt-3">
+              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="index.html">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PREMIUM SERVICES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">AWARDS & TESTIMONIALS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PROPERTY PORTFOLIO</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PROPERTY MUST-KNOW</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            <h4>FAQ</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">ONLY CONCEPTUAL TEACHING</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">SPECIAL CARE FOR SLOW LEARNERS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">DAILY MOTIVATIONAL CLASSES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">SMART CLASSES</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">COMMUNICATION SKILLS DEVELOPMENT</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">SEMINARS BY EVERY STUDENT</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">PRACTICALS BY STUDENTS</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">WEEKLY TEST</a></li>
+            </ul>
+          </div>
+
+          
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Shankar Lukka</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        
+        Designed by <a href="">Shankar</a>
+      </div>
+    </div>
+  </section><!-- End Footer -->
+
+  <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+</body>
+<!-- Vendor JS Files -->
+   <script src="assets/vendor/jquery/jquery.min.js"></script>
+  
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+  <script src="assets/vendor/counterup/counterup.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+</html>
